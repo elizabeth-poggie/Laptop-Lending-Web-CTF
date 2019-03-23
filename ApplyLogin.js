@@ -5,18 +5,25 @@ $(document).ready(function() {
 
         e.preventDefault();
 
-        var urlBoi = $(this).attr('action');
-        console.log( $(this).serializeArray());
+        var data1 = $(this).serializeArray();
+        var response = ({"username": data1[0].value,
+            "password": data1[1].value});
+        console.log(response);
 
         $.ajax({
             type: "POST",
-            url: urlBoi,
-            data: $(this).serializeArray(), // serializes the form's elements in json format
-            success: function(data)
+            url: "http://localhost:8080/login",
+            data: response,
+            //contentType: "application/json",
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            success: function()
             {
-                console.log(data); // show response from the data to make sure its not garbage
+                alert('thank you <3');
+            },
+            error: function()
+            {
+                console.log("error");
             }
         });
-        alert('thank you <3');
     });
 });
