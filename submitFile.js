@@ -7,7 +7,7 @@ $(document).ready(function() {
         e.preventDefault();
 
         //making sure the user doesn't enter fucked up shit. will modify later to cover more cases//
-        if ($.trim($("#Last").val()) === "") {
+        /*if ($.trim($("#Last").val()) === "") {
             alert('(╯°□°）╯ Please enter your last name');
             return false;
         }
@@ -45,12 +45,12 @@ $(document).ready(function() {
         //*/
 
 
-        var url = $(this).attr('action');
+        var urlBoi = $(this).attr('action');
         console.log( $(this).serializeArray());
 
         $.ajax({
             type: "POST",
-            url: url,
+            url: urlBoi,
             data: $(this).serializeArray(), // serializes the form's elements in json format
             success: function(data)
             {
@@ -59,6 +59,31 @@ $(document).ready(function() {
         });
         alert('thank you <3');
     });
+
+    var urlBoi = $(this).attr('action');
+    var data;
+
+    $.ajax({
+        url: urlBoi,
+        type: 'GET',
+        dataType: 'json',
+        success: function(res) {
+            console.log(res); //leave for now to see if actually works
+            data=res;
+        }
+    });
+
+    function append_json(data){
+        var table = document.getElementById('gable');
+        data.forEach(function(object) {
+            var tr = document.createElement('tr');
+            tr.innerHTML = '<td>' + object.COUNTRY + '</td>' +
+                '<td>' + object.LoC + '</td>' +
+                '<td>' + object.BALANCE + '</td>' +
+                '<td>' + object.DATE + '</td>';
+            table.appendChild(tr);
+        });
+    }
 });
 
 

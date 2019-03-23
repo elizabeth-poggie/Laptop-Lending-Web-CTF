@@ -3,111 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <title>Make Event</title>
-    <link rel="stylesheet" type="text/css" href="">
+    <link rel="stylesheet" type="text/css" href="layout.css">
     <script src="jquery-3.3.1.js"></script>
     <script src="submitFile.js"></script>
 </head>
 <body>
 
+
 <div class="container">
-    <form>
-        <div class="row">
-            <h4>Borrower's Information</h4>
-            <div class="input-group input-group-icon">
-                <input type="text" placeholder="Last Name" id="Last" name="Last Name"/>
-                <div class="input-icon"><i class="fa fa-user"></i></div>
-            </div>
-            <div class="input-group input-group-icon">
-                <input type="text" placeholder="First Name" id="First" name="First Name"/>
-                <div class="input-icon"><i class="fa fa-school"></i></div>
-            </div>
-            <div class="input-group input-group-icon">
-                <input type="text" placeholder="McGill ID" id="ID" name="McGill ID"/>
-                <div class="input-icon"><i class="fa fa-location"></i></div>
-            </div>
-            <div class="input-group input-group-icon">
-                <input type="text" placeholder="Phone Number" id="Phone" name="Phone Number"/>
-                <div class="input-icon" ><i class="fa fa-tellMeTheDeets"></i></div>
-            </div>
-            <div class="input-group input-group-icon">
-                <input type="text" placeholder="Email Address" id="Email" name="Email"/>
-                <div class="input-icon"><i class="fa fa-tellMeTheDeets"></i></div>
-            </div>
-        </div>
-
-        <div class="row">
-            <h4>Item Information</h4>
-            <div class="input-group input-group-icon">
-                <input type="text" placeholder="Hardware ID" id="Hardware" name="Hardware ID"/>
-                <div class="input-icon"><i class="fa fa-user"></i></div>
-            </div>
-            <div class="input-group input-group-icon">
-                <input type="text" placeholder="Serial Number" id="Serial" name="Serial Number"/>
-                <div class="input-icon"><i class="fa fa-school"></i></div>
-            </div>
-            <div class="input-group input-group-icon">
-                <input type="text" placeholder="Host Name" id="Host" name="Host Name"/>
-                <div class="input-icon"><i class="fa fa-location"></i></div>
-            </div>
-        </div>
-
-        <div class="row">
-            <h4>Included Items</h4>
-            <div class="checkbox">
-                <div class="col-half">
-                    <input type="checkbox" name="Laptop bag" value="Laptop bag" name="Laptop bag">
-                    <label>Laptop bag</label><br>
-                    <input type="checkbox" name="Power cable" value="Power cable" name = "Power cable">
-                    <label>Power cable</label> <br>
+    <div class="split left">
+        <form class="form">
+            <div class="row">
+                <h4>Borrower's Information</h4>
+                <div class="input-group input-group-icon">
+                    <input type="text" placeholder="Last Name" id="Last" name="Last Name"/>
+                    <div class="input-icon"><i class="fa fa-user"></i></div>
                 </div>
+                <div class="input-group input-group-icon">
+                    <input type="text" placeholder="First Name" id="First" name="First Name"/>
+                    <div class="input-icon"><i class="fa fa-school"></i></div>
+                </div>
+                <div class="input-group input-group-icon">
+                    <input type="text" placeholder="McGill ID" id="ID" name="McGill ID"/>
+                    <div class="input-icon"><i class="fa fa-location"></i></div>
+                </div>
+                <div class="input-group input-group-icon">
+                    <input type="text" placeholder="Phone Number" id="Phone" name="Phone Number"/>
+                    <div class="input-icon" ><i class="fa fa-tellMeTheDeets"></i></div>
+                </div>
+                <div class="input-group input-group-icon">
+                    <input type="text" placeholder="Email Address" id="Email" name="Email"/>
+                    <div class="input-icon"><i class="fa fa-tellMeTheDeets"></i></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4>Item Information</h4>
+                <div class="input-group input-group-icon">
+                    <input type="text" placeholder="Hardware ID" id="Hardware" name="Hardware ID"/>
+                    <div class="input-icon"><i class="fa fa-user"></i></div>
+                </div>
+                <div class="input-group input-group-icon">
+                    <input type="text" placeholder="Serial Number" id="Serial" name="Serial Number"/>
+                    <div class="input-icon"><i class="fa fa-school"></i></div>
+                </div>
+                <div class="input-group input-group-icon">
+                    <input type="text" placeholder="Host Name" id="Host" name="Host Name"/>
+                    <div class="input-icon"><i class="fa fa-location"></i></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4>Included Items</h4>
+                <div class="checkbox">
                     <div class="col-half">
-                    <input type="checkbox" name="VGA adaptor" value="VGA adaptor" name="VGA adaptor">
-                    <label>VGA adaptor</label> <br>
-                    <input type="checkbox" name="DVI adaptor" value="DVI adaptor" name="DVI adaptor">
-                    <label>DVI adaptor</label>
+                        <input type="checkbox" name="Laptop bag" value="Laptop bag" name="Laptop bag">
+                        <label>Laptop bag</label><br>
+                        <input type="checkbox" name="Power cable" value="Power cable" name = "Power cable">
+                        <label>Power cable</label> <br>
+                    </div>
+                        <div class="col-half">
+                        <input type="checkbox" name="VGA adaptor" value="VGA adaptor" name="VGA adaptor">
+                        <label>VGA adaptor</label> <br>
+                        <input type="checkbox" name="DVI adaptor" value="DVI adaptor" name="DVI adaptor">
+                        <label>DVI adaptor</label>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="row-half">
-                <div class="col-half">
-                    <h4>Date Out</h4>
-                    <div class="input-group">
-                       <div class="col-third">
-                          <input type="text" placeholder="DD" id="Dout" name="Day Out"/>
-                       </div>
-                        <div class="col-third">
-                            <input type="text" placeholder="MM" id="Mout" name="Month Out"/>
-                        </div>
-                        <div class="col-third">
-                            <input type="text" placeholder="YYYY" id="Yout" name="Year Out"/>
+            <div class="row">
+                <div class="row-half">
+                    <div class="col-half">
+                        <h4>Date Out</h4>
+                        <div class="input-group">
+                           <div class="col-third">
+                              <input type="text" placeholder="DD" id="Dout" name="Day Out"/>
+                           </div>
+                            <div class="col-third">
+                                <input type="text" placeholder="MM" id="Mout" name="Month Out"/>
+                            </div>
+                            <div class="col-third">
+                                <input type="text" placeholder="YYYY" id="Yout" name="Year Out"/>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-half">
-                    <h4>Date Due</h4>
-                    <div class="input-group">
-                        <div class="col-third">
-                            <input type="text" placeholder="DD" id="Din" name="Day in"/>
-                        </div>
-                        <div class="col-third">
-                            <input type="text" placeholder="MM" id="Min" name="Month in"/>
-                        </div>
-                        <div class="col-third">
-                            <input type="text" placeholder="YYYY" id="Yin" name="Year in"/>
+                    <div class="col-half">
+                        <h4>Date Due</h4>
+                        <div class="input-group">
+                            <div class="col-third">
+                                <input type="text" placeholder="DD" id="Din" name="Day in"/>
+                            </div>
+                            <div class="col-third">
+                                <input type="text" placeholder="MM" id="Min" name="Month in"/>
+                            </div>
+                            <div class="col-third">
+                                <input type="text" placeholder="YYYY" id="Yin" name="Year in"/>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <div class="row">
-            <input type="submit">
-        </div>
-    </form>
+            <br>
+            <div class="row">
+                <input type="submit">
+            </div>
+        </form>
+    </div>
+
+    <div class="split right">
+        <table class="form" id="gable">
+            <colgroup>
+                <col class="twenty" />
+                <col class="fourty" />
+                <col class="thirtyfive" />
+                <col class="twentyfive" />
+            </colgroup>
+            <tr>
+                <th onclick="sortTable(0)"><span class="glyphicon glyphicon-sort"></span>&nbsp&nbspCOUNTRY</th>
+                <th onclick="sortTable(1)"><span class="glyphicon glyphicon-sort"></span>&nbsp&nbspLOCATION</th>
+                <th onclick="sortTable(2)"><span class="glyphicon glyphicon-sort"></span>&nbsp&nbspBALANCE</th>
+                <th onclick="sortTable(3)"><span class="glyphicon glyphicon-sort"></span>&nbsp&nbspDATE</th>
+            </tr>
+        </table>
+    </div>
 </div>
 </body>
 </html>
