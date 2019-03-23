@@ -6,10 +6,19 @@
     <link rel="stylesheet" type="text/css" href="layout.css">
     <script src="jquery-3.3.1.js"></script>
     <script src="submitFile.js"></script>
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+        rel = "stylesheet">
+    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <script>
+         $(function() {
+            $( "#datepicker-1" ).datepicker();
+         });
+      </script>
+
 </head>
 <body>
-
-
 <div class="container">
     <div class="split left">
         <form class="form">
@@ -75,31 +84,7 @@
                 <div class="row-half">
                     <div class="col-half">
                         <h4>Date Out</h4>
-                        <div class="input-group">
-                           <div class="col-third">
-                              <input type="text" placeholder="DD" id="Dout" name="Day Out"/>
-                           </div>
-                            <div class="col-third">
-                                <input type="text" placeholder="MM" id="Mout" name="Month Out"/>
-                            </div>
-                            <div class="col-third">
-                                <input type="text" placeholder="YYYY" id="Yout" name="Year Out"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-half">
-                        <h4>Date Due</h4>
-                        <div class="input-group">
-                            <div class="col-third">
-                                <input type="text" placeholder="DD" id="Din" name="Day in"/>
-                            </div>
-                            <div class="col-third">
-                                <input type="text" placeholder="MM" id="Min" name="Month in"/>
-                            </div>
-                            <div class="col-third">
-                                <input type="text" placeholder="YYYY" id="Yin" name="Year in"/>
-                            </div>
-                        </div>
+                              <p><input type = "text" id = "datepicker-1"></p>
                     </div>
                 </div>
             </div>

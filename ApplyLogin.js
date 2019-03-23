@@ -23,6 +23,7 @@ $(document).ready(function() {
             error: function()
             {
                 console.log("error");
+                console.log(response); // show response from the data to make sure its not garbage
             }
         });
     });
